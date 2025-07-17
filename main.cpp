@@ -16,11 +16,21 @@ int main() {
         {7, 8, 9}
     };
 
-    for (const std::vector<int>& row : matrix1) {
-        for (int num : row) {
-            std::cout << num << " ";
+    int rows1 = matrix1.size();
+    int rows2 = matrix2.size();
+    int cols1 = matrix1[0].size();
+    int cols2 = matrix2[0].size();
+
+    if (cols1 != rows2) {
+        throw std::invalid_argument("Multiplication is impossible!");
+    }
+
+    for (int r1 = 0; r1 < rows1; r1++) {
+        for (int c2 = 0; c2 < cols2; c2++) {
+            for (int i = 0; i < cols1; i++) {
+
+            }
         }
-        std::cout << std::endl;
     }
 
     return 0;
